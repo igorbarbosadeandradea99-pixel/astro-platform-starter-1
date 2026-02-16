@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Neural Target X - Produção Biel</title>
+<style>
+body{
+    background:#0a0a0f;
+    font-family:Arial;
+    color:#fff;
+    text-align:center;
+}
+
+.panel{
+    width:350px;
+    margin:40px auto;
+    padding:20px;
+    border:2px solid red;
+    border-radius:12px;
+    box-shadow:0 0 20px red;
+    background:#111;
+}
+
+h1{
+    color:red;
+    text-shadow:0 0 10px red;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    background:black;
+    color:red;
+    border:1px solid red;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:red;
+    color:black;
+    box-shadow:0 0 15px red;
+}
+
+.range{
+    width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+<h1>NEURAL TARGET X</h1>
+<p>Produção Biel</p>
+
+<label>Smart Target Level</label>
+<input type="range" min="0" max="100" value="50" class="range">
+
+<button>Precision Focus</button>
+<button>Neural Lock</button>
+<button>Dynamic Field</button>
+<button>Stability Control</button>
+<button>Head Priority</button>
+<button>Magnetic Tracking</button>
+<button>Quantum Sync</button>
+
+</div>
+
+<script>
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+        btn.style.background="red";
+        btn.style.color="black";
+        setTimeout(()=>{
+            btn.style.background="black";
+            btn.style.color="red";
+        },500);
+    });
+});
+</script>
+
+</body>
+</html>
